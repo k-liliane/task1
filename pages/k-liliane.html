@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task1</title>
+<link rel="stylesheet" type="text/css" href="../styles/task1style.css">
+
+</head>
+<body>
+
+	<div id="liliane">
+
+	</div>
+
+	<div id="head"> LILIANE  <span style="position: absolute;
+										left: 650px;"> 
+	Contact me  Blog</span>  </div>
+
+	<div id=" smiley"  style="			
+			position: absolute;
+			left: 600px;
+			top: 100px;
+			width: 100px;
+			height: 100px;
+			background-image: url(../images/smiling-face.png );
+			background-size: 100% 100%;
+			background-repeat: no-repeat;"> 
+		</div>
+
+<div id="text">
+	HELLO!!<br>
+	<span  style=" font-family: Gabriola;" >Call Me K-Liliane</span>
+</div>
+
+
+<div id="button">
+<a href="">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	Contact me
+</a>
+</div>
+
+<div id="block">
+<h1>
+			<span>A</span>
+			<span></span>
+			<span>l</span>
+			<span>i</span>
+			<span>t</span>
+			<span>t</span>
+			<span>l</span>
+			<span>e</span>
+			<span></span>
+			<span>Q</span>
+			<span>u</span>
+			<span>i</span>
+			<span>z</span>
+</h1>
+</diV>
+
+
+
+<div id="questions">
+
+	<form name="myform">
+
+	Q1. PHP stand for? (20 marks)<br>
+	<input type="radio" name="Q1" value="a" onclick="check()">Hypertet Preprocessor<br>
+	<input type="radio" name="Q1" value="b" onclick="check()">Person And Home Page<br>
+	<input type="radio" name="Q1" value="c" onclick="check()">Programmation higher predicted<br> <br>
+
+	Q2. CSS stand for? (20 marks)<br onclick="check()">
+	<input type="radio" name="Q2" value="a" onclick="check()">Cascading sort sheets<br>
+	<input type="radio" name="Q2" value="b" onclick="check()">Cascading Stylesheets<br>
+	<input type="radio" name="Q2" value="c" onclick="check()">cascading system sheets<br> <br>	
+
+	Q3. who is a defendant in court ? (10 marks)<br>
+	<input type="radio" name="Q3" value="a" onclick="check()">the lawyer<br>
+	<input type="radio" name="Q3" value="b" onclick="check()">the prosecutor <br>
+	<input type="radio" name="Q3" value="c" onclick="check()">the person whois being accused <br> <br>
+
+	Q4. HDLC stand for? (10 marks)<br>
+	<input type="radio" name="Q4" value="a" onclick="check()">High Data Link Control Protocol<br>
+	<input type="radio" name="Q4" value="b" onclick="check()">Hypertext direct link control protocol<br>
+	<input type="radio" name="Q4" value="c" onclick="check()">Higher Data Lol Control<br><br> 
+	
+	Q5. GSM stand for? (20 marks)<br>
+	<input type="radio" name="Q5" value="a" onclick="check()">Global Mobile System<br>
+	<input type="radio" name="Q5" value="b" onclick="check()">Global System For Monbile Telecommunication<br>
+	<input type="radio" name="Q5" value="c" onclick="check()">Geolocalisation system for mobile phone<br><br>
+	
+	Q6. LTE stand for? (20 marks)<br>
+	<input type="radio" name="Q6" value="a"onclick="check()">longer term evolutive<br>
+	<input type="radio" name="Q6" value="b" onclick="check()">local terminal evolve<br>
+	<input type="radio" name="Q6" value="c" onclick="check()">long Term Evolution<br> 
+
+
+	</form>
+</div>
+
+
+
+<div id="results" >
+	<p>Your Score:<span id="score"></span> </p> 
+	q1: <span id="marks1"></span><br>
+	q2: <span id="marks2"></span><br>
+	q3: <span id="marks3"></span><br>
+	q4: <span id="marks4"></span><br>
+	q5: <span id="marks5"></span><br>
+	q6: <span id="marks6"></span><br>
+</div>
+
+<footer>
+	corpyright 2019 k-Liliane
+</footer>
+
+<script type="text/javascript">
+
+	function check(){
+		var q1 = document.myform.Q1.value;
+		var q2 = document.myform.Q2.value;
+		var q3 = document.myform.Q3.value;
+		var q4 = document.myform.Q4.value;
+		var q5 = document.myform.Q5.value;
+		var q6 = document.myform.Q6.value;
+		var score= 0;
+		var marks1=0;
+		var marks2=0;
+		var marks3=0;
+		var marks4=0;
+		var marks5=0;
+		var marks6=0;
+		var total = document.getElementById('score') ;
+		var ans1 = document.getElementById('marks1');
+		var ans2 = document.getElementById('marks2');
+		var ans3 = document.getElementById('marks3');
+		var ans4 =document. getElementById('marks4');
+		var ans5 = document.getElementById('marks5');
+		var ans6 = document.getElementById('marks6');
+		
+		if(q1 == 'a'){
+			score = score + 20;
+			marks1 = 20;
+			ans1.textContent= marks1;
+			total.textContent = score;
+
+		}else{
+			marks1 = 0;
+			ans1.textContent= marks1;
+			total.textContent = score;
+		}
+
+		if(q2 == 'b'){
+			score = score + 20;
+			marks2 = 20;
+			ans2.textContent= marks2;
+			total.textContent = score;
+		}else{
+			marks2 = 0;
+			ans2.textContent= marks2;
+			total.textContent = score;
+		}
+
+		if(q3 == 'c'){
+			score = score + 10;
+			marks3 = 10;
+			ans3.textContent= marks3;
+			total.textContent = score;
+		}else{
+			marks3 = 0;
+			ans3.textContent= marks3;
+			total.textContent = score;
+		}
+		if(q4 == 'a'){
+			score = score + 10;
+			marks4 = 10;
+			ans4.textContent= marks4;
+			total.textContent = score;
+		}else{
+			marks4 = 0;
+			ans4.textContent= marks4;
+			total.textContent = score;
+		}
+		if(q5 == 'b'){
+			score = score + 20;
+			marks5 = 20;
+			ans5.textContent= marks5;
+			total.textContent = score;
+		}else{
+			marks5 = 0;
+			ans5.textContent= marks5;
+			total.textContent = score;
+		}
+		if(q6 == 'c'){
+			score = score + 20;
+			marks6 = 20;
+			ans6.textContent= marks6;
+			total.textContent = score;
+		}else{
+			marks6 = 0;
+			ans6.textContent= marks6;
+			total.textContent = score;
+		}
+		
+	}
+</script>
+
+
+
+</body>
+</html>

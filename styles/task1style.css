@@ -1,0 +1,237 @@
+
+/*fonts importations*/
+@font-face{
+			font-family: 'Blackadder ITC';
+			src: url('../fonts/Blackadder ITC.ttf');
+}
+@font-face{
+			font-family: 'Gabriola';
+			src: url('../fonts/Gabriola.ttf');
+}
+@font-face{
+			font-family: 'Chiller';
+			src: url('../fonts/Chiller.ttf');
+}
+@font-face{
+			font-family: 'Raleway-Regular';
+			src: url('../fonts/Raleway-Regular.ttf');
+}
+
+/*style*/
+body{
+			background: url("../images/futurist- copy.jpg" )  no-repeat;
+			background-size: 100% 400px;
+			opacity: 1;
+			background-repeat: no-repeat;
+			-webkit-font-smoothing: antialiased;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+}
+
+
+#liliane{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 50px;
+			height: 50px;
+			background-image: url("../images/girl.png");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+}
+
+
+#head{
+			left: 60px;
+			width: 90%;
+			height: 50px;
+			color: white;
+			font-size: 30px;
+			font-family: "Raleway-Regular";
+}
+
+
+#smiley{		
+			
+			position: absolute;
+			left: 600px;
+			top: 100px;
+			width: 100px;
+			height: 100px;
+			background-image: url(../images/smiling-face.png );
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+}
+#text{
+			position: absolute;
+			top: 150px;
+			left: 30px;
+			font-weight: bold;
+			font-size: 3em ; 
+			color: white;
+			font-family: "Chiller";
+}
+
+
+/*animated button*/
+#button{
+			position: absolute;
+			top: 320px;
+			left: 	150px;
+}
+
+a{
+			position: absolute;
+			top: 50%;
+			left:50%;
+			transform: translate(-50%,-50%);
+			width: 200px;
+			height: 60px;
+			text-align:center;
+			line-height:60px;
+			color:#fff;
+			font-size: 24px;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-family: sans-serif;
+			box-sizing: border-box;
+			background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+			background-size: 400%;
+			border-radius: 30px;
+
+}
+
+a:hover{
+			animation:animate 8s linear infinite;
+}
+
+@keyframes animate{
+			0%{
+				background-position: 0%; 
+			}
+			100%{
+				background-position: 400%; 
+			}
+}
+
+a::before{
+			
+			content:''; 
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			right: -5px;
+			bottom: -5px;
+			z-index: -1;
+			background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+			background-size: 400%;
+			border-radius: 40px;
+			filter: blur(20px);
+			opacity: 0;
+			transition: 0.5s;
+}
+
+a:hover:before{
+			filter: blur(20px);
+			opacity: 1;
+			animation: animate ;
+}
+
+
+/*jumping text*/
+#block{
+			position: absolute;
+			top: 400px;
+			left: 0px;
+			width: 100%;
+			height: 100px;
+}
+
+h1{
+			width: 50%;
+}
+
+h1 span{
+			position: relative;
+			left: 300px;
+			top : 25px;
+			display: inline-block;
+			animation: bounce 1s ease infinite alternate;
+			font-family: "Blackadder ITC";
+			font-size: 40px;
+			color:#483067a8;
+			text-shadow: 0 1px 0px #ccc,
+						 0 2px 0px #ccc,
+						  0 3px 0px #ccc,
+						  04px 0px #ccc
+						0 7px 0 transparent,
+						0 8px 0 transparent,
+						0 9px 0 transparent,
+						0 10px 0 transparent,
+						0 11px 0 transparent,
+						0 12px 10px rgba(0,0,0,0.5);						   
+}
+
+h1 span:nth-child(2){ animation-delay: .1s ;}
+h1 span:nth-child(3){ animation-delay: .1s ;}
+h1 span:nth-child(4){ animation-delay: .2s ;}
+h1 span:nth-child(5){ animation-delay: .3s ;}
+h1 span:nth-child(6){ animation-delay: .5s ;}
+h1 span:nth-child(7){ animation-delay: .4s ;}
+h1 span:nth-child(8){ animation-delay: .1s ;}
+h1 span:nth-child(9){ animation-delay: .0s ;}
+h1 span:nth-child(10){ animation-delay: .2s ;}
+h1 span:nth-child(11){ animation-delay: .3s ;}
+h1 span:nth-child(12){ animation-delay: .4s ;}
+h1 span:nth-child(13){ animation-delay: .5s ;}
+
+		
+@keyframes bounce{
+			100%{
+				top : -20px;
+				text-shadow:  0 1px 0 #ccc,
+						0 2px 0 #ccc,
+						0 3px 0 #ccc,
+						0 4px 0 #ccc,
+						0 5px 0 #ccc,
+						0 6px 0 #ccc,
+						0 7px 0 #ccc,
+						0 8px 0 #ccc,
+						0 9px 0 #ccc,
+						0 10px 0 #ccc,
+						0 11px 0 #ccc,
+						0 50px 25px rgba(0,0,0,0.2);
+				}
+}
+
+
+/*style*/
+#questions{
+			position: absolute;
+			top: 500px;
+			width: 45%;
+			left: 50px;
+			float: left;
+			font-family: "Raleway-Regular";
+			color: #201f4c;
+			border-right: 2px solid gray;
+}
+
+#results{
+			position: absolute;
+			top: 650px;
+			width:40%;
+			left: 580px;
+			font-family: "Blackadder ITC";
+			color:#201f4c ; 
+			font-size: 25px;
+			 
+}
+
+footer{
+			position: absolute;
+			top: 1100px;
+			font-family: "Raleway-Regular";
+			color: #201f4c;
+}
